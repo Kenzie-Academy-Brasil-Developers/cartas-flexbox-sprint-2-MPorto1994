@@ -10,13 +10,23 @@ html {
 
 .card {
     /* display, flex-direction */
+    display: flex;
+    flex-direction: column;
     border: 1px solid #CAD0D2;
     border-radius: 4px;
     overflow: hidden;
+    align-items: stretch;
+    justify-content: stretch;
+    flex: 1;
+
 }
 
 .card__description {
     /* display, flex-direction, justify-content, align-items */
+    display: flex;
+    flex-direction:column;
+    /* justify-content:space-evenly; */
+    
     padding: 15px 0;
 }
 
@@ -41,15 +51,17 @@ html {
 
 .cardGroup {
     /* display */
-  
+    display: flex;
+    /* justify-content: space-around; */
     border: 1px solid #CAD0D2;
     border-radius: 4px;
     overflow: hidden;
+    width: 320px;
   }
   
     .cardGroup__card {
       /* flex-grow, flex-shrink, flex-basis */
-  
+      
       border: none;
       border-radius: 0;
     }
