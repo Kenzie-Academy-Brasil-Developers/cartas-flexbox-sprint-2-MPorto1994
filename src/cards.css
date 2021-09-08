@@ -2,32 +2,40 @@ html {
     font-family: "Raleway", "Helvetica", sans-serif;
     font-weight: 400;
     color: #2F3442;
-    height: 100%;
+    /* height: 100%; */
     background-color: #FFFFFF;
 }
-
+body{
+display: flex;
+justify-content: center;
+}
 .icon {color: #BCD2DA;}
 
 .card {
-    /* display, flex-direction */
-    display: flex;
-    flex-direction: column;
     border: 1px solid #CAD0D2;
     border-radius: 4px;
     overflow: hidden;
-    align-items: stretch;
-    justify-content: stretch;
-    flex: 1;
-
+    /* flex1 = flex-grow=1 ; flexshrink=1 ; flex-basis: 0 */
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 140px;
+    min-width: 180px;
+    max-width: 200px;
 }
 
 .card__description {
     /* display, flex-direction, justify-content, align-items */
     display: flex;
     flex-direction:column;
-    /* justify-content:space-evenly; */
-    
+    align-items: center;
     padding: 15px 0;
+    height: calc(100% - 24px);
+    justify-content: center;
+
 }
 
 .card__descriptionIcon {font-size: 32px; margin-bottom: 10px;}
@@ -36,7 +44,7 @@ html {
     color: #57727C;
     font-size: 12px;
     text-align: center;
-    max-width: calc(100% - 30px);
+    /* max-width: calc(100% - 30px); */
 }
 
 .card__price {
@@ -52,18 +60,19 @@ html {
 .cardGroup {
     /* display */
     display: flex;
-    /* justify-content: space-around; */
-    border: 1px solid #CAD0D2;
     border-radius: 4px;
     overflow: hidden;
-    width: 320px;
+    justify-content: center;
+    padding: 10px;
+    /* max-width: max-content ; */
+    min-width: 70%;
+    flex-wrap: wrap;
   }
   
     .cardGroup__card {
       /* flex-grow, flex-shrink, flex-basis */
       
-      border: none;
-      border-radius: 0;
+      
     }
   
     .cardGroup__card {
@@ -72,4 +81,19 @@ html {
   
     .cardGroup__cardDescription {
       /* flex-grow, flex-shrink, flex-basis */
+    }
+
+
+    @media (min-width: 580px){
+      .card {
+        border: none;
+      }
+      .cardGroup {
+        border: 1px solid #CAD0D2;
+        border-radius: 4px;
+        padding: 0%;
+      }
+      #div1 , #div2 {
+        border-left: 1px solid #CAD0D2;;
+      }
     }
